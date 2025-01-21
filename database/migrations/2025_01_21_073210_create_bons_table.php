@@ -15,6 +15,10 @@ class CreateBonsTable extends Migration
     {
         Schema::create('bons', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_transaaction');
+            $table->string('name');
+            $table->integer('nominal');
+            $table->text('information');
             $table->timestamps();
         });
     }

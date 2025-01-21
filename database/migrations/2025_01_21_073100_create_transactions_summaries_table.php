@@ -15,6 +15,13 @@ class CreateTransactionsSummariesTable extends Migration
     {
         Schema::create('transaction_summaries', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_transaction');
+            $table->integer('id_user');
+            $table->integer('selling_price');
+            $table->integer('paid');
+            $table->integer('return');
+            $table->integer('status');
+            $table->string('buyer');
             $table->timestamps();
         });
     }
